@@ -10,8 +10,10 @@ do.modules=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=santoni
-device.name2=redmi4x
-device.name3=redmi4
+device.name2=Xiaomi
+device.name3=Redmi 4X
+device.name4=
+device.name5=
 '; } # end properties
 
 # shell variables
