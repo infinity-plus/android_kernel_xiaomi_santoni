@@ -289,24 +289,6 @@ int power_supply_get_battery_charge_state(struct power_supply *psy)
 }
 
 EXPORT_SYMBOL(power_supply_get_battery_charge_state);
-
-int power_supply_get_battery_charge_state(struct power_supply *psy)
-{
-	union power_supply_propval ret = {0,};
-
-	if (!psy) {
-		pr_err("power supply is NULL\n");
-	}
-
-	if (psy->get_property) {
-		psy->get_property(psy, POWER_SUPPLY_PROP_PRESENT,  &ret);
-	}
-
-	pr_debug("online:%d\n", ret.intval);
-
-	return ret.intval;
-
-}
 EXPORT_SYMBOL(power_supply_get_battery_charge_state);
 
 /**
